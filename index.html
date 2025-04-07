@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. それぞれの属性と使い分け</title>
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        color: #222222;
+        font-family: sans-serif;
+        background-color: #f8f9fa;
+      }
+      button {
+        cursor: pointer;
+        font-size: 16px;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s ease-in-out;
+        vertical-align: middle;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+        &:focus-visible {
+          outline: 2px solid #4285f4;
+          outline-offset: 2px;
+        }
+      }
+      li {
+        list-style: none;
+      }
+      .wrapper {
+        padding: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .main-button-wrapper {
+        display: flex;
+        gap: 16px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+      }
+      .main-button {
+        width: 64px;
+        height: 64px;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        color: #3c4043;
+        &:hover {
+          background-color: #f1f3f4;
+        }
+      }
+      .main-button--menu {
+        anchor-name: --main-button-menu;
+      }
+      .main-button__image {
+        width: 24px;
+        height: 24px;
+      }
+      .main-button__text {
+        font-size: 12px;
+      }
+      .menu {
+        padding: 8px;
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+      .menu-inner {
+        display: flex;
+        gap: 8px;
+      }
+      .main-menu {
+        position-anchor: --main-button-menu;
+        position-area: top span-right;
+      }
+      .menu-button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: #f0f0f0;
+        }
+        &:focus-visible {
+          outline-offset: 1px;
+        }
+      }
+      .menu-button--more {
+        anchor-name: --menu-button-more;
+      }
+      .menu-button__icon {
+        width: 24px;
+        height: 24px;
+      }
+      .additional-menu {
+        position-anchor: --menu-button-more;
+        position-area: top span-right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-button-wrapper">
+        <button class="main-button main-button--menu" popovertarget="main-menu">
+          <img class="main-button__image" src="./images/icon_menu.svg" alt="" />
+          <span class="main-button__text">メニュー</span>
+        </button>
+        <button class="main-button">
+          <img
+            class="main-button__image"
+            src="./images/icon_toast.svg"
+            alt=""
+          />
+          <span class="main-button__text">トースト</span>
+        </button>
+      </div>
+
+      <div id="main-menu" popover="auto" class="menu main-menu">
+        <menu class="menu-inner">
+          <li>
+            <button class="menu-button" aria-label="いいね">
+              <img
+                class="menu-button__icon"
+                src="./images/icon_like.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li>
+            <button class="menu-button" aria-label="スター">
+              <img
+                class="menu-button__icon"
+                src="./images/icon_star.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li>
+            <button class="menu-button" aria-label="ブックマーク">
+              <img
+                class="menu-button__icon"
+                src="./images/icon_bookmark.svg"
+                alt=""
+              />
+            </button>
+          </li>
+          <li>
+            <button
+              class="menu-button menu-button--more"
+              popovertarget="additional-menu"
+              aria-label="もっと見る"
+            >
+              <img
+                class="menu-button__icon"
+                src="./images/icon_more.svg"
+                alt=""
+              />
+            </button>
+
+            <div id="additional-menu" popover="auto" class="menu additional-menu">
+              <menu class="menu-inner">
+                <li>
+                  <button class="menu-button" aria-label="タグ">
+                    <img
+                      class="menu-button__icon"
+                      src="./images/icon_tag.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button class="menu-button" aria-label="追加">
+                    <img
+                      class="menu-button__icon"
+                      src="./images/icon_add.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button class="menu-button" aria-label="削除">
+                    <img
+                      class="menu-button__icon"
+                      src="./images/icon_delete.svg"
+                      alt=""
+                    />
+                  </button>
+                </li>
+              </menu>
+            </div>
+          </li>
+        </menu>
+      </div>
+    </div>
+  </body>
+</html>
