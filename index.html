@@ -116,7 +116,15 @@
       }
       .additional-menu {
         position-anchor: --menu-button-more;
-        position-area: top span-right;
+        position-area: top;
+      }
+      .menu-hint {
+        position: relative;
+        font-size: 10px;
+        background-color: #3c4043;
+        color: #ffffff;
+        padding: 6px 8px;
+        border-radius: 4px;
       }
     </style>
   </head>
@@ -147,6 +155,7 @@
                 alt=""
               />
             </button>
+            <span class="menu-hint" popover="hint">いいね</span>
           </li>
           <li>
             <button class="menu-button" aria-label="スター">
@@ -156,6 +165,7 @@
                 alt=""
               />
             </button>
+            <span class="menu-hint" popover="hint">スター</span>
           </li>
           <li>
             <button class="menu-button" aria-label="ブックマーク">
@@ -165,6 +175,7 @@
                 alt=""
               />
             </button>
+            <span class="menu-hint" popover="hint">ブックマーク</span>
           </li>
           <li>
             <button
@@ -178,8 +189,13 @@
                 alt=""
               />
             </button>
+            <span class="menu-hint" popover="hint">もっと見る</span>
 
-            <div id="additional-menu" popover="auto" class="menu additional-menu">
+            <div
+              id="additional-menu"
+              popover="auto"
+              class="menu additional-menu"
+            >
               <menu class="menu-inner">
                 <li>
                   <button class="menu-button" aria-label="タグ">
@@ -189,6 +205,7 @@
                       alt=""
                     />
                   </button>
+                  <span class="menu-hint" popover="hint">タグ</span>
                 </li>
                 <li>
                   <button class="menu-button" aria-label="追加">
@@ -198,6 +215,7 @@
                       alt=""
                     />
                   </button>
+                  <span class="menu-hint" popover="hint">追加</span>
                 </li>
                 <li>
                   <button class="menu-button" aria-label="削除">
@@ -207,6 +225,7 @@
                       alt=""
                     />
                   </button>
+                  <span class="menu-hint" popover="hint">削除</span>
                 </li>
               </menu>
             </div>
@@ -214,5 +233,6 @@
         </menu>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
