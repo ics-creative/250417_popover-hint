@@ -1,7 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+// ツールチップの開閉を設定する
+const setupHints = () => {
   const menuButtons = document.querySelectorAll(".menu-button");
-  console.log("menu buttons", menuButtons);
-
   menuButtons.forEach((button) => {
     button.addEventListener("mouseenter", () => {
       const hint = button.parentElement.querySelector(".menu-hint");
@@ -17,4 +16,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+};
+
+// トーストの設定
+const setupToast = () => {
+  const toastButton = document.querySelector(".toast-button");
+
+  toastButton.addEventListener("click", () => {
+    const toast = document.createElement("div");
+    toast.popover = "manual";
+    toast.classList.add("toast");
+    const message = document.createElement("p");
+    message.textContent = "トーストです！";
+    toast.appendChild(message);
+
+    document.body.appendChild(toast);
+    toast.showPopover();
+
+    window.setTimeout(() => {
+      toast.hidePopover();
+      toast.remove();
+    }, 2000)
+  })
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  setupHints();
+  setupToast();
 });

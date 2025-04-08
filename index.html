@@ -114,17 +114,30 @@
         width: 24px;
         height: 24px;
       }
-      .additional-menu {
-        position-anchor: --menu-button-more;
-        position-area: top;
-      }
       .menu-hint {
-        position: relative;
         font-size: 10px;
         background-color: #3c4043;
         color: #ffffff;
         padding: 6px 8px;
         border-radius: 4px;
+        position-area: top;
+      }
+      .toast {
+        display: flex;
+        align-items: center;
+        height: 60px;
+        width: 240px;
+        position: absolute;
+        top: 16px;
+        left: 50%;
+        translate: -50% 0;
+        padding: 16px 24px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: #3c4043;
+        font-size: 14px;
       }
     </style>
   </head>
@@ -135,7 +148,7 @@
           <img class="main-button__image" src="./images/icon_menu.svg" alt="" />
           <span class="main-button__text">メニュー</span>
         </button>
-        <button class="main-button">
+        <button class="main-button toast-button">
           <img
             class="main-button__image"
             src="./images/icon_toast.svg"
@@ -148,40 +161,68 @@
       <div id="main-menu" popover="auto" class="menu main-menu">
         <menu class="menu-inner">
           <li>
-            <button class="menu-button" aria-label="いいね">
+            <button
+              class="menu-button"
+              aria-label="いいね"
+              style="anchor-name: --menu-like"
+            >
               <img
                 class="menu-button__icon"
                 src="./images/icon_like.svg"
                 alt=""
               />
             </button>
-            <span class="menu-hint" popover="hint">いいね</span>
+            <span
+              class="menu-hint"
+              popover="hint"
+              style="position-anchor: --menu-like"
+              >いいね</span
+            >
           </li>
           <li>
-            <button class="menu-button" aria-label="スター">
+            <button
+              class="menu-button"
+              aria-label="スター"
+              style="anchor-name: --menu-star"
+            >
               <img
                 class="menu-button__icon"
                 src="./images/icon_star.svg"
                 alt=""
               />
             </button>
-            <span class="menu-hint" popover="hint">スター</span>
+            <span
+              class="menu-hint"
+              popover="hint"
+              style="position-anchor: --menu-star"
+              >スター</span
+            >
           </li>
           <li>
-            <button class="menu-button" aria-label="ブックマーク">
+            <button
+              class="menu-button"
+              aria-label="ブックマーク"
+              style="anchor-name: --menu-bookmark"
+            >
               <img
                 class="menu-button__icon"
                 src="./images/icon_bookmark.svg"
                 alt=""
               />
             </button>
-            <span class="menu-hint" popover="hint">ブックマーク</span>
+            <span
+              class="menu-hint"
+              popover="hint"
+              style="position-anchor: --menu-bookmark"
+              >ブックマーク</span
+            >
           </li>
           <li>
             <button
               class="menu-button menu-button--more"
               popovertarget="additional-menu"
               aria-label="もっと見る"
+              style="anchor-name: --menu-more"
             >
               <img
                 class="menu-button__icon"
@@ -189,46 +230,12 @@
                 alt=""
               />
             </button>
-            <span class="menu-hint" popover="hint">もっと見る</span>
-
-            <div
-              id="additional-menu"
-              popover="auto"
-              class="menu additional-menu"
+            <span
+              class="menu-hint"
+              popover="hint"
+              style="position-anchor: --menu-more"
+              >もっと見る</span
             >
-              <menu class="menu-inner">
-                <li>
-                  <button class="menu-button" aria-label="タグ">
-                    <img
-                      class="menu-button__icon"
-                      src="./images/icon_tag.svg"
-                      alt=""
-                    />
-                  </button>
-                  <span class="menu-hint" popover="hint">タグ</span>
-                </li>
-                <li>
-                  <button class="menu-button" aria-label="追加">
-                    <img
-                      class="menu-button__icon"
-                      src="./images/icon_add.svg"
-                      alt=""
-                    />
-                  </button>
-                  <span class="menu-hint" popover="hint">追加</span>
-                </li>
-                <li>
-                  <button class="menu-button" aria-label="削除">
-                    <img
-                      class="menu-button__icon"
-                      src="./images/icon_delete.svg"
-                      alt=""
-                    />
-                  </button>
-                  <span class="menu-hint" popover="hint">削除</span>
-                </li>
-              </menu>
-            </div>
           </li>
         </menu>
       </div>
