@@ -3,16 +3,16 @@ const setupHints = () => {
   const menuButtons = document.querySelectorAll(".menu-button");
   menuButtons.forEach((button) => {
     button.addEventListener("mouseenter", () => {
-      const hint = button.parentElement.querySelector(".menu-hint");
-      if (hint && !hint.matches(":popover-open")) {
-        hint.showPopover();
+      const tooltip = button.parentElement.querySelector(".menu-hint");
+      if (tooltip && !tooltip.matches(":popover-open")) {
+        tooltip.showPopover();
       }
     });
 
     button.addEventListener("mouseleave", () => {
-      const hint = button.parentElement.querySelector(".menu-hint");
-      if (hint && hint.matches(":popover-open")) {
-        hint.hidePopover();
+      const tooltip = button.parentElement.querySelector(".menu-hint");
+      if (tooltip && tooltip.matches(":popover-open")) {
+        tooltip.hidePopover();
       }
     });
   });
