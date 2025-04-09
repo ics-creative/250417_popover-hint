@@ -5,11 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   color: #222222;
   font-family: sans-serif;
   background-color: #f8f9fa;
 }
+
 button {
   cursor: pointer;
   font-size: 16px;
@@ -29,9 +31,33 @@ button {
     outline-offset: 2px;
   }
 }
+
 li {
   list-style: none;
 }
+
+a {
+  color: #1967d2;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out, text-decoration-color 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 2px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: #1967d2;
+}
+
+a:focus-visible {
+  color: #1967d2;
+  text-decoration: underline;
+  text-decoration-color: #1967d2;
+  outline: 2px solid #4285f4;
+  outline-offset: 2px;
+}
+
 .container {
   padding: 60px;
   display: flex;
@@ -41,6 +67,7 @@ li {
   min-height: 100vh;
   gap: 40px;
 }
+
 .main-button-wrapper {
   display: flex;
   gap: 16px;
@@ -49,6 +76,7 @@ li {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
 }
+
 .main-button {
   width: 64px;
   height: 64px;
@@ -63,16 +91,20 @@ li {
     background-color: #f1f3f4;
   }
 }
+
 .main-button--menu {
   anchor-name: --main-button-menu;
 }
+
 .main-button__image {
   width: 24px;
   height: 24px;
 }
+
 .main-button__text {
   font-size: 12px;
 }
+
 .menu {
   padding: 8px;
   background-color: #ffffff;
@@ -80,14 +112,17 @@ li {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
 .menu-inner {
   display: flex;
   gap: 8px;
 }
+
 .main-menu {
   position-anchor: --main-button-menu;
   position-area: top span-right;
 }
+
 .menu-button {
   width: 40px;
   height: 40px;
@@ -102,13 +137,12 @@ li {
     outline-offset: 1px;
   }
 }
-.menu-button--more {
-  anchor-name: --menu-button-more;
-}
+
 .menu-button__icon {
   width: 24px;
   height: 24px;
 }
+
 .hint {
   font-size: 10px;
   background-color: #3c4043;
@@ -116,9 +150,11 @@ li {
   padding: 6px 8px;
   border-radius: 4px;
 }
+
 .menu-hint {
   position-area: top;
 }
+
 .toast {
   display: flex;
   align-items: center;
@@ -138,15 +174,19 @@ li {
   color: #3c4043;
   font-size: 14px;
 }
+
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 4px;
 }
+
 .link-help {
   display: flex;
   cursor: pointer;
 }
+
 .link-hint {
   position-area: bottom;
   text-align: center;

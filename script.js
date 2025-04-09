@@ -29,7 +29,7 @@ const setupToast = () => {
   toastButton.addEventListener("click", () => {
     const toast = document.createElement("div");
     toast.popover = "manual";
-    toast.classList.add(["toast", "js-toast"]);
+    toast.classList.add("toast", "js-toast");
     const message = document.createElement("p");
     message.textContent = "トーストです！";
     toast.appendChild(message);
