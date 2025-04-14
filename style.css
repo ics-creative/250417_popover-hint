@@ -80,7 +80,6 @@ a:focus-visible {
 .main-button {
   width: 64px;
   height: 64px;
-  padding: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,17 +91,13 @@ a:focus-visible {
   }
 }
 
-.main-button--menu {
-  anchor-name: --main-button-menu;
-}
-
 .main-button__image {
   width: 24px;
   height: 24px;
 }
 
 .main-button__text {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .menu {
@@ -111,16 +106,12 @@ a:focus-visible {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position-area: top span-right;
 }
 
 .menu-inner {
   display: flex;
   gap: 8px;
-}
-
-.main-menu {
-  position-anchor: --main-button-menu;
-  position-area: top span-right;
 }
 
 .menu-button {

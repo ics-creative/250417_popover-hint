@@ -8,11 +8,12 @@
   </head>
   <body>
     <div class="container">
-      <!-- menu -->
+      <!-- メインボタン -->
       <div>
         <div class="main-button-wrapper">
           <button
-            class="main-button main-button--menu"
+            class="main-button"
+            style="anchor-name: --main-button-menu"
             popovertarget="main-menu"
           >
             <img
@@ -24,6 +25,21 @@
               loading="lazy"
             />
             <span class="main-button__text">メニュー</span>
+          </button>
+          <button
+            class="main-button"
+            style="anchor-name: --main-button-account"
+            popovertarget="main-account"
+          >
+            <img
+              class="main-button__image"
+              src="./images/icon_person.svg"
+              alt=""
+              width="20"
+              height="20"
+              loading="lazy"
+            />
+            <span class="main-button__text">アカウント</span>
           </button>
           <button class="main-button toast-button js-toast-button">
             <img
@@ -38,7 +54,13 @@
           </button>
         </div>
 
-        <div id="main-menu" popover="auto" class="menu main-menu">
+        <!-- メニューの中身 -->
+        <div
+          id="main-menu"
+          popover="auto"
+          class="menu"
+          style="position-anchor: --main-button-menu"
+        >
           <menu class="menu-inner">
             <li>
               <button
@@ -131,7 +153,85 @@
             </li>
           </menu>
         </div>
+
+        <!-- アカウントメニューの中身-->
+        <div
+          id="main-account"
+          popover="auto"
+          class="menu"
+          style="position-anchor: --main-button-account"
+        >
+          <menu class="menu-inner">
+            <li>
+              <button
+                class="menu-button js-menu-button"
+                aria-label="支払い"
+                style="anchor-name: --account-payment"
+              >
+                <img
+                  class="menu-button__icon"
+                  src="./images/icon_payment.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+              </button>
+              <span
+                class="hint menu-hint js-menu-hint"
+                popover="hint"
+                style="position-anchor: --account-payment"
+                >支払い</span
+              >
+            </li>
+            <li>
+              <button
+                class="menu-button js-menu-button"
+                aria-label="設定"
+                style="anchor-name: --account-setting"
+              >
+                <img
+                  class="menu-button__icon"
+                  src="./images/icon_setting.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+              </button>
+              <span
+                class="hint menu-hint js-menu-hint"
+                popover="hint"
+                style="position-anchor: --account-setting"
+                >設定</span
+              >
+            </li>
+            <li>
+              <button
+                class="menu-button js-menu-button"
+                aria-label="ログアウト"
+                style="anchor-name: --account-logout"
+              >
+                <img
+                  class="menu-button__icon"
+                  src="./images/icon_logout.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                />
+              </button>
+              <span
+                class="hint menu-hint js-menu-hint"
+                popover="hint"
+                style="position-anchor: --account-logout"
+                >ログアウト</span
+              >
+            </li>
+          </menu>
+        </div>
       </div>
+
       <!-- リンク -->
       <p class="link">
         <a href="#">このリンクの横の?にホバーしてね</a>
