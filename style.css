@@ -144,15 +144,16 @@ a:focus-visible {
   position-area: top;
   padding-bottom: 6px;
   margin-bottom: 2px;
-  /* アニメーション(消滅) */
+  /* ツールチップが消えた時の状態 */
   opacity: 0;
   scale: 0.8;
   translate: 0 8px;
+  /* トランジションの設定 */
   transition: opacity 0.2s, scale 0.2s, translate 0.2s;
 }
 
 .hint:popover-open {
-  /* アニメーション(表示) */
+  /* ツールチップが表示された時の状態 */
   opacity: 1;
   scale: 1;
   translate: 0 0;
@@ -170,7 +171,7 @@ a:focus-visible {
 }
 
 @starting-style {
-  /* アニメーションの開始時の状態 */
+  /* アニメーションの開始時の状態をあらかじめ定義しておく */
   .hint:popover-open {
     opacity: 0;
     scale: 0.8;
