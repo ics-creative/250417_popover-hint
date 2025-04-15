@@ -66,11 +66,15 @@ const setupToast = () => {
 const setupLinkHint = () => {
   const help = document.querySelector(".js-link-help");
   const hint = document.querySelector(".js-link-hint");
-  help.addEventListener("mouseover", () => {
+
+  // mouseenterでツールチップを表示する
+  help.addEventListener("mouseenter", () => {
     if (hint && !hint.matches(":popover-open")) {
       hint.showPopover();
     }
   });
+
+  // mouseleaveでツールチップを非表示にする
   help.addEventListener("mouseleave", () => {
     if (hint && hint.matches(":popover-open")) {
       hint.hidePopover();
