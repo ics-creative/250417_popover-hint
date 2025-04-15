@@ -58,6 +58,12 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
+[popover] {
+  border: none;
+  background: transparent;
+  overflow-y: hidden;
+}
+
 .container {
   padding: 60px;
   display: flex;
@@ -135,16 +141,47 @@ a:focus-visible {
 }
 
 .hint {
-  font-size: 10px;
-  background-color: #3c4043;
-  color: #ffffff;
-  padding: 6px 8px;
-  border-radius: 4px;
+  position-area: top;
+  padding-bottom: 6px;
   margin-bottom: 2px;
 }
 
-.menu-hint {
-  position-area: top;
+.hint--bottom {
+  position-area: bottom;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-top: 6px;
+}
+
+.hint__inner {
+  display: inline-block;
+  font-size: 10px;
+  background: #333536;
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  padding-bottom: 4px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #3c4043;
+    bottom: -3px;
+    rotate: 45deg;
+    left: 50%;
+    translate: -50% 0;
+  }
+}
+
+.hint__inner--bottom {
+  &::before {
+    top: -3px;
+  }
 }
 
 .toast {
@@ -177,11 +214,4 @@ a:focus-visible {
 .link-help {
   display: flex;
   cursor: pointer;
-}
-
-.link-hint {
-  position-area: bottom;
-  text-align: center;
-  margin-top: 2px;
-  margin-bottom: 0px;
 }

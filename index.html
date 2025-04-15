@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. それぞれの属性と使い分け</title>
+    <title>それぞれの属性と使い分け</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -78,11 +78,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --menu-like"
-                >いいね</span
               >
+                <span class="hint__inner">いいね</span>
+              </span>
             </li>
             <li>
               <button
@@ -100,11 +101,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --menu-star"
-                >スター</span
               >
+                <span class="hint__inner">スター</span>
+              </span>
             </li>
             <li>
               <button
@@ -122,11 +124,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --menu-bookmark"
-                >ブックマーク</span
               >
+                <span class="hint__inner">ブックマーク</span>
+              </span>
             </li>
             <li>
               <button
@@ -145,11 +148,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --menu-more"
-                >もっと見る</span
               >
+                <span class="hint__inner">もっと見る</span>
+              </span>
             </li>
           </menu>
         </div>
@@ -178,11 +182,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --account-payment"
-                >支払い</span
               >
+                <span class="hint__inner">支払い</span>
+              </span>
             </li>
             <li>
               <button
@@ -200,11 +205,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --account-setting"
-                >設定</span
               >
+                <span class="hint__inner">設定</span>
+              </span>
             </li>
             <li>
               <button
@@ -222,11 +228,12 @@
                 />
               </button>
               <span
-                class="hint menu-hint js-menu-hint"
+                class="hint js-menu-hint"
                 popover="hint"
                 style="position-anchor: --account-logout"
-                >ログアウト</span
               >
+                <span class="hint__inner">ログアウト</span>
+              </span>
             </li>
           </menu>
         </div>
@@ -245,11 +252,13 @@
         /></span>
       </p>
       <p
-        class="hint link-hint js-link-hint"
+        class="hint hint--bottom js-link-hint"
         popover="hint"
         style="position-anchor: --link-help"
       >
-        リンクについての説明です<br />ツールチップで説明を表示します
+        <span class="hint__inner hint__inner--bottom">
+          リンクについての説明です<br />ツールチップで説明を表示します
+        </span>
       </p>
     </div>
 
