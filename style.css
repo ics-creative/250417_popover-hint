@@ -144,6 +144,18 @@ a:focus-visible {
   position-area: top;
   padding-bottom: 6px;
   margin-bottom: 2px;
+  /* アニメーション(消滅) */
+  opacity: 0;
+  scale: 0.8;
+  translate: 0 8px;
+  transition: opacity 0.2s, scale 0.2s, translate 0.2s;
+}
+
+.hint:popover-open {
+  /* アニメーション(表示) */
+  opacity: 1;
+  scale: 1;
+  translate: 0 0;
 }
 
 .hint--bottom {
@@ -153,6 +165,20 @@ a:focus-visible {
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-top: 6px;
+  /* アニメーション(消滅) */
+  translate: 0 -8px;
+}
+
+@starting-style {
+  /* アニメーションの開始時の状態 */
+  .hint:popover-open {
+    opacity: 0;
+    scale: 0.8;
+    translate: 0 8px;
+  }
+  .hint--bottom:popover-open {
+    translate: 0 -8px;
+  }
 }
 
 .hint__inner {
