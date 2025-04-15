@@ -140,6 +140,7 @@ a:focus-visible {
   color: #ffffff;
   padding: 6px 8px;
   border-radius: 4px;
+  margin-bottom: 2px;
 }
 
 .menu-hint {
@@ -181,4 +182,6 @@ a:focus-visible {
 .link-hint {
   position-area: bottom;
   text-align: center;
+  margin-top: 2px;
+  margin-bottom: 0px;
 }
