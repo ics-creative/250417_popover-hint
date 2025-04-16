@@ -80,6 +80,15 @@ const setupLinkHint = () => {
       hint.hidePopover();
     }
   });
+
+  // 要素のタップ、キーボードでも操作できるようにする
+  help.addEventListener("click", () => {
+    if (hint && !hint.matches(":popover-open")) {
+      hint.showPopover();
+    } else if (hint && hint.matches(":popover-open")) {
+      hint.hidePopover();
+    }
+  });
 };
 
 document.addEventListener("DOMContentLoaded", () => {

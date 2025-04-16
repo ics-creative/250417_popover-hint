@@ -26,6 +26,110 @@
             />
             <span class="main-button__text">メニュー</span>
           </button>
+
+          <!-- メニューの中身 -->
+          <div
+            id="main-menu"
+            popover="auto"
+            class="menu"
+            style="position-anchor: --main-button-menu"
+          >
+            <menu class="menu-inner">
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  aria-label="いいね"
+                  style="anchor-name: --menu-like"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_like.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --menu-like"
+                >
+                  <span class="hint__inner">いいね</span>
+                </span>
+              </li>
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  aria-label="スター"
+                  style="anchor-name: --menu-star"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_star.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --menu-star"
+                >
+                  <span class="hint__inner">スター</span>
+                </span>
+              </li>
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  aria-label="ブックマーク"
+                  style="anchor-name: --menu-bookmark"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_bookmark.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --menu-bookmark"
+                >
+                  <span class="hint__inner">ブックマーク</span>
+                </span>
+              </li>
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  popovertarget="additional-menu"
+                  aria-label="もっと見る"
+                  style="anchor-name: --menu-more"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_more.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --menu-more"
+                >
+                  <span class="hint__inner">もっと見る</span>
+                </span>
+              </li>
+            </menu>
+          </div>
           <button
             class="main-button"
             style="anchor-name: --main-button-account"
@@ -41,6 +145,86 @@
             />
             <span class="main-button__text">アカウント</span>
           </button>
+          <!-- アカウントメニューの中身-->
+          <div
+            id="main-account"
+            popover="auto"
+            class="menu"
+            style="position-anchor: --main-button-account"
+          >
+            <menu class="menu-inner">
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  aria-label="支払い"
+                  style="anchor-name: --account-payment"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_payment.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --account-payment"
+                >
+                  <span class="hint__inner">支払い</span>
+                </span>
+              </li>
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  aria-label="設定"
+                  style="anchor-name: --account-setting"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_setting.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --account-setting"
+                >
+                  <span class="hint__inner">設定</span>
+                </span>
+              </li>
+              <li>
+                <button
+                  class="menu-button js-menu-button"
+                  aria-label="ログアウト"
+                  style="anchor-name: --account-logout"
+                >
+                  <img
+                    class="menu-button__icon"
+                    src="./images/icon_logout.svg"
+                    alt=""
+                    width="20"
+                    height="20"
+                    loading="lazy"
+                  />
+                </button>
+                <span
+                  class="hint js-menu-hint"
+                  popover="hint"
+                  style="position-anchor: --account-logout"
+                >
+                  <span class="hint__inner">ログアウト</span>
+                </span>
+              </li>
+            </menu>
+          </div>
+
           <button class="main-button toast-button js-toast-button">
             <img
               class="main-button__image"
@@ -53,196 +237,12 @@
             <span class="main-button__text">トースト</span>
           </button>
         </div>
-
-        <!-- メニューの中身 -->
-        <div
-          id="main-menu"
-          popover="auto"
-          class="menu"
-          style="position-anchor: --main-button-menu"
-        >
-          <menu class="menu-inner">
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                aria-label="いいね"
-                style="anchor-name: --menu-like"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_like.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --menu-like"
-              >
-                <span class="hint__inner">いいね</span>
-              </span>
-            </li>
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                aria-label="スター"
-                style="anchor-name: --menu-star"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_star.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --menu-star"
-              >
-                <span class="hint__inner">スター</span>
-              </span>
-            </li>
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                aria-label="ブックマーク"
-                style="anchor-name: --menu-bookmark"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_bookmark.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --menu-bookmark"
-              >
-                <span class="hint__inner">ブックマーク</span>
-              </span>
-            </li>
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                popovertarget="additional-menu"
-                aria-label="もっと見る"
-                style="anchor-name: --menu-more"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_more.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --menu-more"
-              >
-                <span class="hint__inner">もっと見る</span>
-              </span>
-            </li>
-          </menu>
-        </div>
-
-        <!-- アカウントメニューの中身-->
-        <div
-          id="main-account"
-          popover="auto"
-          class="menu"
-          style="position-anchor: --main-button-account"
-        >
-          <menu class="menu-inner">
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                aria-label="支払い"
-                style="anchor-name: --account-payment"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_payment.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --account-payment"
-              >
-                <span class="hint__inner">支払い</span>
-              </span>
-            </li>
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                aria-label="設定"
-                style="anchor-name: --account-setting"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_setting.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --account-setting"
-              >
-                <span class="hint__inner">設定</span>
-              </span>
-            </li>
-            <li>
-              <button
-                class="menu-button js-menu-button"
-                aria-label="ログアウト"
-                style="anchor-name: --account-logout"
-              >
-                <img
-                  class="menu-button__icon"
-                  src="./images/icon_logout.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  loading="lazy"
-                />
-              </button>
-              <span
-                class="hint js-menu-hint"
-                popover="hint"
-                style="position-anchor: --account-logout"
-              >
-                <span class="hint__inner">ログアウト</span>
-              </span>
-            </li>
-          </menu>
-        </div>
       </div>
 
       <!-- リンク -->
       <p class="link">
         <a href="#">このリンクの横の?にホバーしてね</a>
-        <span class="link-help js-link-help" style="anchor-name: --link-help"
+        <button class="link-help js-link-help" style="anchor-name: --link-help"
           ><img
             src="./images/icon_help.svg"
             alt="help"
